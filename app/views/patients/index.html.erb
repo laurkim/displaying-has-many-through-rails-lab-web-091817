@@ -1,0 +1,8 @@
+<h1>Seattle Grace Hospital Patients: </h1>
+
+<% @patients.each do |patient| %>
+  <ul>
+    <strong><li><p>Name: </strong><%= link_to patient.name, patient_path(patient) %></p></li>
+    <strong></li><p>Number of Appointments: </strong><%= pluralize(patient.appt_count, "appointment") %></p></li>
+  </ul>
+<% end %>
